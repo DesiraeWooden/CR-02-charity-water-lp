@@ -30,11 +30,12 @@ body {
 
 .cta-button {
     background-color: #FFC907;
-    color: #1A1A1A;
+    color: #FFF7E1;           /* Make text the same color as header and subheader */
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 17px;
     cursor: pointer;
+    border-radius: 25px; /* Rounded corners for the Track Your Donations button */
 }
 
 /* Hero Section */
@@ -48,29 +49,21 @@ body {
     position: relative;
     padding: 60px 50px;
     display: flex;
-    align-items: center;
-    min-height: 400px;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start;     /* Align items to the top */
+    min-height: 90vh;
 }
-
-/* Removed the .hero::before overlay so the image is not faded */
-/*
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 247, 225, 0.85); 
-    z-index: 1;
-}
-*/
 
 /* Put the text in front of the image and overlay */
 .hero-text {
     position: relative;
-    z-index: 2; /* Make sure text is above the overlay */
+    z-index: 2;
     max-width: 50%;
-    /* Optional: add a slight background for better readability */
-    /* background: rgba(255,255,255,0.2); */
-    /* padding: 20px; */
+    /* Move the text to the top left with some padding for spacing */
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 30px;   /* Add space from the top */
+    padding-left: 30px;  /* Add space from the left */
 }
 
 /* Hero Section headings and subheadings */
@@ -87,12 +80,13 @@ body {
 }
 
 .donate-button {
-    background-color: #1A1A1A;
-    color: #FFC907;
+    background-color: #FFC907;   /* Changed to brand yellow */
+    color: #FFF7E1;              /* Keep text color cream */
     border: none;
     padding: 15px 30px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
+    border-radius: 25px; /* Rounded corners for the Donate Now button */
 }
 
 /* Reviews Section */
@@ -103,7 +97,7 @@ body {
     justify-content: space-around;
     text-align: center;
     /* Add margin-top to push the reviews section lower on the page */
-    margin-top: 200px; /* You can adjust this value as needed */
+    margin: top 0; /* You can adjust this value as needed */
 }
 
 .review {
@@ -117,4 +111,21 @@ body {
 
 .review span {
     font-weight: bold;
+}
+.review p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review span {
+    font-weight: bold;
+}
+
+/* Style for the outlined stars above each review */
+.review-stars {
+    display: block;         /* Make stars appear on their own line */
+    text-align: center;     /* Center the stars above the review */
+    font-size: 28px;        /* Make the stars bigger */
+    color: #000000;         /* Black color for outlined stars */
+    margin-bottom: 10px;    /* Space below the stars */
 }
