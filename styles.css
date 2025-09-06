@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Proxima Nova', sans-serif;
+    /* Added Avenir font for beginners to see how to list multiple fonts */
+    font-family: 'Proxima Nova', Avenir, sans-serif;
 }
 
 /* Body Styling */
@@ -38,24 +39,51 @@ body {
 
 /* Hero Section */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* Use the Charity.jpeg image as a background */
+    background-image: url('img/Charity.jpeg');
+    background-size: cover; /* Make the image cover the whole section */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Removed the cream color overlay so the image shows in its original color */
+    position: relative;
     padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    min-height: 400px;
 }
 
+/* Removed the .hero::before overlay so the image is not faded */
+/*
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 247, 225, 0.85); 
+    z-index: 1;
+}
+*/
+
+/* Put the text in front of the image and overlay */
 .hero-text {
+    position: relative;
+    z-index: 2; /* Make sure text is above the overlay */
     max-width: 50%;
+    /* Optional: add a slight background for better readability */
+    /* background: rgba(255,255,255,0.2); */
+    /* padding: 20px; */
 }
 
+/* Hero Section headings and subheadings */
 .hero-text h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #FFF7E1; /* Set header color to cream */
 }
 
 .hero-text p {
     font-size: 18px;
     margin-bottom: 30px;
+    color: #FFF7E1; /* Set subheader color to cream */
 }
 
 .donate-button {
@@ -67,11 +95,6 @@ body {
     cursor: pointer;
 }
 
-.hero-image img {
-    max-width: 500px;
-    border-radius: 10px;
-}
-
 /* Reviews Section */
 .reviews {
     background-color: #FFC907;
@@ -79,6 +102,8 @@ body {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    /* Add margin-top to push the reviews section lower on the page */
+    margin-top: 200px; /* You can adjust this value as needed */
 }
 
 .review {
