@@ -26,6 +26,15 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    display: flex;                /* Use flex to align image and text */
+    align-items: center;          /* Vertically center image and text */
+}
+
+.logo img {
+    margin-right: 8px;            /* Space between image and text */
+    width: 32px;                  /* Set image size */
+    height: 32px;
+    vertical-align: middle;       /* Align image with text baseline */
 }
 
 .cta-button {
@@ -36,6 +45,8 @@ body {
     font-size: 17px;
     cursor: pointer;
     border-radius: 25px; /* Rounded corners for the Track Your Donations button */
+    /* Add a simple shadow to the button */
+    box-shadow: 2px 2px 6px #888888;
 }
 
 /* Hero Section */
@@ -59,18 +70,19 @@ body {
     position: relative;
     z-index: 2;
     max-width: 50%;
-    /* Move the text to the top left with some padding for spacing */
-    margin-top: 0;
-    margin-left: 0;
-    padding-top: 30px;   /* Add space from the top */
-    padding-left: 30px;  /* Add space from the left */
+    /* Move the text further up and to the left */
+    margin-top: -30px;   /* Move up */
+    margin-left: -30px;  /* Move left */
+    padding-top: 0;
+    padding-left: 0;   /* Remove left padding to move text left */
 }
 
 /* Hero Section headings and subheadings */
 .hero-text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #FFF7E1; /* Set header color to cream */
+    font-size: 48px;
+    margin-bottom: 8px;
+    color: #FFF7E1;
+    line-height: 1.1; /* Tighter line height for heading */
 }
 
 .hero-text p {
@@ -87,6 +99,8 @@ body {
     font-size: 17px;
     cursor: pointer;
     border-radius: 25px; /* Rounded corners for the Donate Now button */
+    /* Add a simple shadow to the button */
+    box-shadow: 2px 2px 6px #888888;
 }
 
 /* Reviews Section */
@@ -121,11 +135,12 @@ body {
     font-weight: bold;
 }
 
-/* Style for the outlined stars above each review */
+/* Style for the filled stars above each review */
 .review-stars {
     display: block;         /* Make stars appear on their own line */
     text-align: center;     /* Center the stars above the review */
     font-size: 28px;        /* Make the stars bigger */
-    color: #000000;         /* Black color for outlined stars */
+    color: #2E9DF7;         /* Blue color for filled stars */
     margin-bottom: 10px;    /* Space below the stars */
+    text-shadow: 2px 2px 4px #888888; /* Add a simple gray shadow to the stars */
 }
