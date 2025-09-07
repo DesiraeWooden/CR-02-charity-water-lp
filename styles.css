@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Added Avenir font for beginners to see how to list multiple fonts */
-    font-family: 'Proxima Nova', Avenir, sans-serif;
+    /* Force all text to use Proxima Nova only */
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 /* Body Styling */
@@ -19,14 +19,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 12px 50px;      /* Reduce top/bottom padding to move banner up */
     background-color: #FFF7E1;
+    margin-top: -8px;        /* Move the header up slightly */
 }
 
 .logo {
     font-size: 24px;
-    font-weight: bold;
-    display: flex;                /* Use flex to align image and text */
+    font-weight: normal;    /* Make logo text not bold */
+    display: flex;
     align-items: center;          /* Vertically center image and text */
 }
 
@@ -39,14 +40,21 @@ body {
 
 .cta-button {
     background-color: #FFC907;
-    color: #FFF7E1;           /* Make text the same color as header and subheader */
+    color: #FFF7E1;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 18px;      /* Tighter padding for a smaller button */
     font-size: 17px;
     cursor: pointer;
     border-radius: 25px; /* Rounded corners for the Track Your Donations button */
     /* Add a simple shadow to the button */
     box-shadow: 2px 2px 6px #888888;
+}
+
+/* Hover effect for the call to action button */
+.cta-button:hover {
+    background-color: #FFD700; /* Lighter yellow on hover */
+    color: #1A1A1A;            /* Dark text for contrast */
+    box-shadow: 4px 4px 10px #888888; /* Slightly bigger shadow */
 }
 
 /* Hero Section */
@@ -88,29 +96,42 @@ body {
 .hero-text p {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #FFF7E1; /* Set subheader color to cream */
+    color: #FFF7E1;
+    text-align: center;
+    max-width: 500px;
 }
 
+/* Center the donate button with the subheader */
 .donate-button {
-    background-color: #FFC907;   /* Changed to brand yellow */
-    color: #FFF7E1;              /* Keep text color cream */
+    background-color: #FFC907;
+    color: #FFF7E1;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 22px;     /* Tighter padding for a smaller button */
     font-size: 17px;
     cursor: pointer;
-    border-radius: 25px; /* Rounded corners for the Donate Now button */
-    /* Add a simple shadow to the button */
+    border-radius: 25px;
     box-shadow: 2px 2px 6px #888888;
+    display: block;
+    /* Move the button slightly to the left of center */
+    margin-left: 140px;    /* Adjust this value as needed for your layout */
+    margin-right: auto;
+    margin-top: 300px; /* Move the donate button further down */
+}
+
+/* Hover effect for the donate button */
+.donate-button:hover {
+    background-color: #FFD700; /* Lighter yellow on hover */
+    color: #1A1A1A;            /* Dark text for contrast */
+    box-shadow: 4px 4px 10px #888888; /* Slightly bigger shadow */
 }
 
 /* Reviews Section */
 .reviews {
     background-color: #FFC907;
-    padding: 50px;
+    padding: 25px; /* Shorten the review banner by reducing padding */
     display: flex;
     justify-content: space-around;
     text-align: center;
-    /* Add margin-top to push the reviews section lower on the page */
     margin: top 0; /* You can adjust this value as needed */
 }
 
@@ -142,5 +163,10 @@ body {
     font-size: 28px;        /* Make the stars bigger */
     color: #2E9DF7;         /* Blue color for filled stars */
     margin-bottom: 10px;    /* Space below the stars */
-    text-shadow: 2px 2px 4px #888888; /* Add a simple gray shadow to the stars */
+    text-shadow:
+        2px 2px 4px #888888,   /* Existing gray shadow */
+        -1px -1px 0 #000,      /* Black outline: top-left */
+        1px -1px 0 #000,       /* Black outline: top-right */
+        -1px 1px 0 #000,       /* Black outline: bottom-left */
+        1px 1px 0 #000;        /* Black outline: bottom-right */
 }
